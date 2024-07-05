@@ -1,0 +1,277 @@
+body {
+  font-family: "Roboto Flex", Arial;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 145, 77, 1);
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+  width: 100%;
+  transition: width 0.5s;
+}
+
+.logo-container img {
+  max-width: 50%;
+  height: auto;
+  transition: max-width 0.5s;
+}
+
+.logo-container p {
+  color: rgb(38, 37, 37);
+  font-family: "Roboto Flex", sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 900px;
+  position: relative;
+  align-content: center;
+  transition: opacity 0.5s;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  transition: width 0.5s;
+}
+
+.forms-container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.5s, transform 0.5s;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  text-align: center;
+  transition: transform 0.5s;
+}
+
+.input-container p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="file"],
+input[type="text"],
+select {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.input-container .explanation {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #030303;
+}
+
+.input-container .guide {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #eae8e8;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#result-container {
+  margin-top: 20px;
+  width: 70%;
+  display: none;
+  text-align: center;
+  transition: width 0.5s;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #000;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+footer {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8em;
+}
+
+footer a {
+  color: #c15e2e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #90361b;
+}
+
+footer strong {
+  font-weight: bold;
+}
+
+.footer-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.volta-topo {
+  font-weight: bold;
+  padding: 5px;
+  position: fixed;
+  right: 45px;
+  top: 91%;
+  background-color: rgba(255, 145, 77, 1);
+  z-index: 555;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.volta-topo i {
+  font-size: 20px;
+  margin: 0 6px;
+  color: #fff;
+}
+
+.menu-principal {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1001;
+}
+
+.menu-principal a {
+  color: #c4c1c1;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu-principal a:hover {
+  color: rgb(253, 252, 251);
+}
+
+.menu-toggle, .conteudo-toggle {
+  display: none;
+}
+
+.menu-toggle {
+  color: white;
+  font-size: 2rem;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle .barras-menu-toggle {
+  color: white;
+  font-size: 1.5rem;
+  margin: 4px 10px;
+}
+
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-principal {
+    display: none;
+  }
+}
+
+.conteudo-toggle {
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 1001;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.conteudo-toggle a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.conteudo-toggle a:hover {
+  color: #c15e2e;
+}
+
+.conteudo-toggle.mostrar {
+  display: flex;
+}
+
+/* Adicione ao seu arquivo CSS existente */
+#result-container {
+  display: none;
+  width: 100%;
+  text-align: center;
+  border-left: 2px solid #000; /* Linha divisória */
+  height: 100vh; /* Ajuste conforme necessário */
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #000;
+  animation: blink 2s infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.restart-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}

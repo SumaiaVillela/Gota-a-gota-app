@@ -1,0 +1,12 @@
+            <div class="input-container">        
+                <h3>Você pesquisou:</h3>
+                <p>{{ texto_extraido }} </p><br>
+
+                {% for item in resposta %}
+                    <h2 class="h2 result">{{ item.termo_encontrado }}</h2>
+                        <p>{{ item.tem_derivado }}</p><br>
+                        <p>{{ item.explicacao }}</p><br><br>
+                {% endfor %}
+
+                <br><p class="guide">Encontrou algum erro na resposta? Escreva para dadosparasumaia@gmail.com</p>
+            </div>
