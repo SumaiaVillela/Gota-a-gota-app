@@ -1,167 +1,3 @@
-body {
-  font-family: "Roboto Flex", Arial;
-  margin: 0;
-  padding: 0;
-  background-color: rgba(255, 145, 77, 1);
-}
-
-header {
-  text-align: center;
-  padding: 40px 0;
-  width: 100%;
-  transition: width 0.5s;
-}
-
-.logo-container img {
-  max-width: 50%;
-  height: auto;
-  transition: max-width 0.5s;
-}
-
-.logo-container p {
-  color: rgb(38, 37, 37);
-  font-family: "Roboto Flex", sans-serif;
-  margin: 0 auto;
-  text-align: center;
-  max-width: 900px;
-  position: relative;
-  align-content: center;
-  transition: opacity 0.5s;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  transition: width 0.5s;
-}
-
-.forms-container {
-  width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: width 0.5s, transform 0.5s;
-}
-
-.input-container {
-  margin-bottom: 20px;
-  text-align: center;
-  transition: transform 0.5s;
-}
-
-.input-container p {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-input[type="file"],
-input[type="text"],
-select {
-  width: 50%;
-  padding: 10px;
-  margin-top: 10px;
-  border: 2px solid #000;
-  border-radius: 20px;
-  display: inline-block;
-}
-
-input[type="submit"] {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.input-container .explanation {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #030303;
-}
-
-.input-container .guide {
-  font-style: italic;
-  font-size: 0.8rem;
-  color: #eae8e8;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-#result-container {
-  margin-top: 20px;
-  width: 70%;
-  display: none;
-  text-align: center;
-  transition: width 0.5s;
-}
-
-.loading {
-  font-size: 1.2rem;
-  color: #000;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-footer {
-  background-color: #000;
-  color: #ccc;
-  text-align: center;
-  padding: 10px;
-  font-size: 0.8em;
-}
-
-footer a {
-  color: #c15e2e;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #90361b;
-}
-
-footer strong {
-  font-weight: bold;
-}
-
-.footer-content {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.volta-topo {
-  font-weight: bold;
-  padding: 5px;
-  position: fixed;
-  right: 45px;
-  top: 91%;
-  background-color: rgba(255, 145, 77, 1);
-  z-index: 555;
-  border-radius: 2px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.volta-topo i {
-  font-size: 20px;
-  margin: 0 6px;
-  color: #fff;
-}
-
 .menu-principal {
   position: fixed;
   top: 10px;
@@ -246,23 +82,172 @@ footer strong {
   display: flex;
 }
 
-/* Adicione ao seu arquivo CSS existente */
-#result-container {
-  display: none;
-  width: 100%;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 145, 77, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+header {
   text-align: center;
-  border-left: 2px solid #000; /* Linha divisória */
-  height: 100vh; /* Ajuste conforme necessário */
+  padding: 40px 0;
+  width: 100%;
+  transition: width 0.5s;
+}
+
+.logo-container img {
+  max-width: 50%;
+  height: auto;
+  transition: max-width 0.5s;
+}
+
+.logo-container p {
+  color: rgb(38, 37, 37);
+  font-family: "Anonymous Pro", monospace;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  text-align: center;
+  max-width: 900px;
+  position: relative;
+  align-content: center;
+  transition: opacity 0.5s;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  transition: width 0.5s;
+  padding-bottom: 60px;
+}
+
+.forms-container {
+  width: 80%px;
+  margin: 0 auto;
+  padding: 10px 10px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.5s, transform 0.5s;
+}
+
+.input-container {
+  margin-bottom: 10px;
+  text-align: center;
+  transition: transform 0.5s;
+  font-family: "Anonymous Pro", monospace;
+}
+
+.input-container p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="file"],
+input[type="text"],
+select {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  display: inline-block;
+  font-family: "Anonymous Pro", monospace;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: "Anonymous Pro", monospace;
+}
+
+.input-container .explanation {
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: #030303;
+  margin-bottom: 0.6rem;
+}
+
+.input-container .guide {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #eae8e8;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+#result-container {
+  margin-top: 10px;
+  width: 70%;
+  display: none;
+  height: auto;
+  min-height: 400px;
+  text-align: left;
+  transition: width 0.5s;
+  font-family: "Anonymous Pro", monospace;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-container {
+  margin-bottom: 10px;
+  text-align: left;
+  transition: transform 0.5s;
+}
+
+.result-container h2 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.result-container p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.result-container .guide {
+  font-style: italic;
+  font-size: 1rem;
+  color: #eae8e8;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .loading {
-  font-size: 1.2rem;
+  font-size: 2.5rem;
   color: #000;
   animation: blink 2s infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-family: "Anonymous Pro", monospace;
+  position: flex;
+  align-content: center;
+  text-align: center;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .restart-button {
@@ -274,4 +259,56 @@ footer strong {
   cursor: pointer;
   font-weight: bold;
   margin-top: 10px;
+  font-family: "Anonymous Pro", monospace;
+}
+
+footer {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8em;
+  position: relative;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  margin-top:auto;
+}
+
+footer a {
+  color: #c15e2e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #90361b;
+}
+
+footer strong {
+  font-weight: bold;
+}
+
+.footer-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sobre-container {
+  margin-top: 10px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  text-align: left;
+  font-family: "Anonymous Pro", monospace;
+  background-color: rgba(255, 255, 255);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.sobre-container p, li {
+  line-height: 1.5;
+  margin-bottom: 1em;
 }

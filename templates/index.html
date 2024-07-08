@@ -4,9 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A onipresença do petróleo em nossas vidas</title>
+  <title>Gota a Gota: prospectando petróleo em produtos</title>
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -14,7 +18,7 @@
   <header>
     <div class="logo-container">
       <img src="static/img/logo_gota_a_gota.png" alt="Logo da ferramenta de IA e jornalismo de dados que prospecta petróleo em produtos" />
-      <p> Tem petróleo em tudo. É difícil pensar nessa ideia de forma concreta? Criamos uma base de dados e pedimos uma ajudinha da Inteligência Artificial para que você possa testar nossa afirmação. Rastreie petrolatos e outros componentes em listas de composição em texto ou imagem </p>
+      <p> <b>Tem petróleo em tudo.</b> É difícil pensar nessa ideia de forma concreta? Criamos uma base de dados e pedimos uma ajudinha da <em>Inteligência Artificial</em> para que você possa testar nossa afirmação. Rastreie as listas de ingredientes dos seus produtos</p>
     </div>
   </header>
 
@@ -26,8 +30,8 @@
     <!-- Formulários -->
     <div class="forms-container"> 
       <div class="input-container">
-        <p class="explanation">Envie a imagem de um rótulo ou etiqueta de roupa:</p>
-        <p class="guide">A foto ou print precisa ser nítida e recortada (só os ingredientes/composição). Formatos: JPG, JPEG, PNG</p>
+        <h3 class="explanation">Envie a imagem de um rótulo ou etiqueta de roupa:</h3>
+        <p class="guide">A foto ou print precisa ser nítida e bem enquadrada (só os ingredientes/composição). Formatos: JPG, JPEG, PNG</p>
         <form id="image-form" action="/" method="POST" enctype="multipart/form-data">
           <input type="file" id="imagem" name="image" accept="image/*" required>
           <input type="submit" value="Descobrir">
@@ -35,8 +39,8 @@
       </div>
 
       <div class="input-container">
-        <p class="explanation">Se preferir, envie a lista de composição ou ingredientes em texto:</p>
-        <p class="guide">Pode copiar a composição de um produto online, buscar uma substância ou até nos ajudar a testar por produto (ex.: celular)</p>
+        <h3 class="explanation">Se preferir, envie a lista de composição ou ingredientes em texto:</h3>
+        <p class="guide">Pode ser a composição de um produto online ou uma substância específica</p>
         <form id="text-form" action="/" method="POST">
           <input type="text" id="texto" name="texto" maxlength="700" placeholder="Digite aqui" required>
           <input type="submit" value="Descobrir">
@@ -44,30 +48,28 @@
       </div>
 
       <div class="input-container">
-        <p class="explanation">Ou selecione uma substância da lista:</p>
+        <h3 class="explanation">Ou selecione uma substância da lista:</h3>
         <form id="substance-form" action="/" method="POST">
           <select id="substance" name="substance">
             <option value="" selected disabled hidden>Escolha aqui</option>
             {% for termo in termos | sort %}
-            <option value="{{ termo }}">{{ termo }}</option>
+            <option class="option" value="{{ termo }}">{{ termo }}</option>
             {% endfor %}
           </select>
           <input type="submit" value="Descobrir">
         </form>
       </div>
     </div>
-
-      <!-- Linha divisória <div class="divider"></div> -->
     
     <!-- Contêiner para os resultados -->
-    <div id="result-container">
+    <div id="result-container" class="result-container">
       <p id="loading-message" class="loading">Procurando rastros de petróleo...</p>
     </div>
   </main>
 
   <footer>
     <div class="footer-content">
-      <p>Este é o trabalho final de Sumaia Villela para o primeiro módulo do Master em Jornalismo de Dados, Automação e Data Storytelling do Insper. é um protótipo, ainda em fase experimental | <a target="_blank" href="https://github.com/SumaiaVillela/petroleo_MJD">Acesse o repositório no GitHub</a></p>
+      <p>Projeto desenvolvido por Sumaia Villela para o Master em Jornalismo de Dados, Automação e Data Storytelling do Insper. Protótipo em fase experimental | <a target="_blank" href="https://github.com/SumaiaVillela/petroleo_MJD">Código no GitHub</a></p>
       <p><strong>Informe erros, faça sugestões ou apoie esse projeto:</strong> <span style="color: #c15e2e;">dadosparasumaia@gmail.com</span></p>
     </div>
   </footer>

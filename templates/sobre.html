@@ -1,78 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gota a Gota: usando a IA para prospectar petróleo em produtos</title>
+    <title>Gota a Gota: prospectando petróleo em produtos</title>
     <link rel="stylesheet" href="static/css/style.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-</head>
 <body>
-
-    <div class="menu">
-        {% include 'menu.html' %}
-    </div>
-    <br>
-    <br>
-    <div class="container">
-
-        <div class="form-box">
-            <div class="input-container">
-                <a href="/" class="back-link">&#8592; Voltar para a página inicial</a>
-                <h2 hidden>Gota a Gota</h2>
-                <h3 hidden>Prospectando petróleo em produtos</h3>
-            </div>
-
-            <div class="box-image">
-                <img src="static/img/logo_gota_a_gota.png" alt="Gota a Gota: ferramenta de IA que prospecta petróleo em produtos" />
-            </div>
-
-            <p>Este projeto surgiu a partir de um desejo: <strong>ampliar a discussão sobre a necessidade de se reduzir o uso do petróleo para além dos combustíveis.</strong> A ideia era construir uma ferramenta de impacto educativo para que as pessoas pudessem refletir sobre produtos que as cercam.</p>
-
-            <p>Um protótipo de buscador de substâncias de petróleo em produtos foi criado com três tipos de inputs:</p>
-            <ul>
-            <li>A análise de imagens de rótulos e etiquetas de roupas;</li>
-            <li>A análise de textos (listas de ingredientes, por exemplo);</li>
-            <li>E a disponibilização da lista de substâncias, para consulta, que usamos como parte da análise dos dois outros inputs.</li>
-            </ul>
-
-            <p>A aplicação foi criada como trabalho final da primeira metade o Marter em Jornalismo de Dados, Automação e Data Storytelling do Insper.</p>
-
-            <p>Usei Python, Flask, HTML, CSS, Google Sheets e o ChatGPT (para imagem e texto) para desenvolver o projeto.</p>
-
-            <blockquote>
-            <p><strong>IMPORTANTE:</strong> Apesar de ter contado com a ajuda de um PhD em química para acompanhar a precisão das informações fornecidas pela ferramenta nesta primeira fase de desenvolvimento, ela não deve ser usada com objetivos científicos.</p>
-            </blockquote>
-
-            <p>Cabe ressaltar, no entanto, que há potencial para o desenvolvimento de uma aplicação que utilize informação cientificamente embasada para análise dos inputs extraídos com a ajuda de Inteligência Artificial.</p>
-
-            <p>Expliquei o passo a passo do desenvolvimento e outros detalhes no repositório do projeto no <a href="https://github.com/SumaiaVillela/petroleo_MJD">GitHub</a>.</p>
-
-            <h2>Falta de dados sobre o tema aponta para oportunidades</h2>
-
-            <p>Quando o projeto foi pensado, o primeiro passo planejado era coletar de forma automatizada os nomes de substâncias derivadas do petróleo e suas descrições em sites ou bases de dados abertas. Essa se mostrou a maior dificuldade.</p>
-            
-            <p>A lista inicial precisou ser construída manualmente e, após a reunião dos termos, contou com a ajuda do ChatGPT para síntese de explicações e organização das informações, tudo revisado por uma jornalista e um químico.</p>
-            
-            <p>Ao que parece, não há uma sistematização dessas substâncias com o recorte desejado, somente das "famílias" delas, como naftas, que não são os mesmos termos encontrados em rótulos. Essa limitação, que não permitiu a robustez que foi inicialmente planejada, também expôs uma oportunidade: criar esse banco de dados por meio e ao longo de uma segunda etapa do projeto.</p>
-                
-            <p>É possível atuar em conjunto com especialistas da área para a construção de uma lista cientificamente referenciada, com links para comprovação das informações, que possa vir a ser uma referência de pesquisa. Outra possível funcionalidade é criar um grande banco de dados com nomes de produtos ou até mesmo itens genéricos (bola de futebol, lente de contato), que possa expor concretamente se geralmente possui derivado de petróleo.</p>
-            
-            <p>O objetivo é conquistar financiamento para manter o projeto no ar de forma sustentável (há custos, como o pagamento da API do ChatGPT e um servidor robusto); concretizar o potencial da ferramenta e remunerar especialista e desenvolvedor da ferramenta.</p>
-
-            <p><em>Se quiser apoiar esse projeto, entre em contato: dadosparasumaia@gmail.com</em></p>
-
-            <h2>Monitoramento do conteúdo</h2>
-
-            <p>Como já citado, o projeto contou com a observação voluntária do professor do Departamento de Química Inorgânica da Universidade Federal Fluminense (UFF), <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=D33923E61978548D3A75BDE03999A811.buscatextual_0">Thiago de Melo Lima</a>. A escolha se deu pela pesquisa que desenvolve: <a href="https://www.uff.br/?q=noticias/06-06-2023/pesquisa-da-uff-desenvolve-fontes-de-energia-alternativas-ao-petroleo">desenvolve fontes de energia alternativas ao petróleo</a>, utilizando plantas que são um "problema" em grandes centros urbanos.</p>
-            
-            <p>Primeiro, discutimos quais os parâmetros mais seguros para o prompt do ChaGPT, dada a necessidade de não usar respostas absolutas (muitas substâncias, por exemplo, possuem versão orgânica e sintética) e tornar a resposta de IA mais precisa. O professor também revisou a lista de substâncias adotadas como verificador primário.</p>
-            
-            <p>Depois, outra planilha eletrônica foi adicionada ao processo. Desta vez, para armazenar as respostas dadas pelo GPT após o envio de input de texto (oriundo de imagem ou não) para o modelo. Assim, era possível verificar como a IA estava reagindo a diferentes prompts. Ambos revisamos esse conteúdo para aperfeiçoamento da ferramenta.</p>
-
+    <header>
+        <div class="logo-container">
+            <img src="static/img/logo_gota_a_gota.png"/>
+            <h2 hidden>Gota a Gota</h2>
+            <h3 hidden>Prospectando petróleo em produtos</h3>
         </div>
-    </div>
+    </header>
+
+    <nav>
+        {% include 'menu.html' %}
+    </nav>
+
+    <main class="container">
+        <div class="forms-container"> 
+            <div class="sobre-container">
+                <p>Este projeto surgiu a partir de um desejo: <strong>ampliar a discussão sobre a necessidade de se reduzir o uso do petróleo para além dos combustíveis.</strong> A ideia era construir uma ferramenta de impacto educativo para que as pessoas pudessem refletir sobre produtos que as cercam.</p>
+
+                <p>O <b>Gota a Gota: Prospectando Petróleo em Produtos</b> foi criado com três tipos de inputs:</p>
+                <ul>
+                    <li>A análise de imagens de rótulos e etiquetas de roupas;</li>
+                    <li>A análise de textos (listas de ingredientes, por exemplo);</li>
+                    <li>E a disponibilização da lista de substâncias, para consulta, que usamos como parte da análise dos dois outros inputs.</li>
+                </ul>
+
+                <p>Foram usados Python, Flask, HTML, CSS, Google Sheets e o Chat GPT (imagem e texto) para desenvolver o projeto.</p>
+
+                <blockquote>
+                    <p><strong>IMPORTANTE:</strong> Apesar de ter contado com a ajuda de um PhD em química para acompanhar a precisão das informações fornecidas pela ferramenta nesta primeira fase de desenvolvimento, ela não deve ser usada com objetivos científicos.</p>
+                </blockquote>
+
+                <p>Cabe ressaltar, no entanto, que há potencial para o desenvolvimento de uma aplicação que utilize informação cientificamente embasada para análise dos inputs extraídos com a ajuda de Inteligência Artificial.</p>
+
+                <p>Expliquei o passo a passo do desenvolvimento e outros detalhes no repositório do projeto no <a href="https://github.com/SumaiaVillela/petroleo_MJD">GitHub</a>.</p>
+
+                <h2>Falta de dados e oportunidades</h2>
+
+                <p>Quando o projeto foi pensado, o primeiro passo planejado era coletar de forma automatizada os nomes de substâncias derivadas do petróleo e suas descrições em sites ou bases de dados abertas. Essa se mostrou a maior dificuldade.</p>
+        
+                <p>A lista inicial precisou ser construída manualmente e, após a reunião dos termos, contou com a ajuda do ChatGPT para síntese de explicações e organização das informações, tudo revisado por uma jornalista e um químico.</p>
+        
+                <p>Ao que parece, não há uma sistematização dessas substâncias com o recorte desejado, somente das "famílias" delas, como naftas, que não são os mesmos termos encontrados em rótulos. Essa limitação, que não permitiu a robustez que foi inicialmente planejada, também expôs uma oportunidade: criar esse banco de dados por meio e ao longo de uma segunda etapa do projeto.</p>
+            
+                <p><em>Se quiser apoiar esse projeto para tornar a segunda etapa póssível, entre em contato: dadosparasumaia@gmail.com</em></p>
+
+                <h2>Monitoramento do conteúdo</h2>
+
+                <p>Como já citado, o projeto contou com a observação voluntária do professor do Departamento de Química Inorgânica da Universidade Federal Fluminense (UFF), <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=D33923E61978548D3A75BDE03999A811.buscatextual_0">Thiago de Melo Lima</a>. A escolha se deu pela pesquisa que desenvolve: <a href="https://www.uff.br/?q=noticias/06-06-2023/pesquisa-da-uff-desenvolve-fontes-de-energia-alternativas-ao-petroleo"> o uso de fontes de energia alternativas ao petróleo</a>, utilizando plantas que são um "problema" em grandes centros urbanos.</p>
+        
+                <p>Primeiro, discutimos quais os parâmetros mais seguros para o prompt do ChaGPT, dada a necessidade de não usar respostas absolutas (muitas substâncias, por exemplo, possuem versão orgânica e sintética) e tornar a resposta de IA mais precisa. O professor também revisou a lista de substâncias adotadas como verificador primário.</p>
+        
+                <p>Depois, outra planilha eletrônica foi adicionada ao processo. Desta vez, para armazenar as respostas dadas pelo GPT após o envio de input de texto (oriundo de imagem ou não) para o modelo. Assim, era possível verificar como a IA estava reagindo a diferentes prompts. Ambos revisamos esse conteúdo para aperfeiçoamento da ferramenta.</p>
+                
+                <h2>Quem fez</h2>
+
+                <p>O <b>Gota a Gota: Prospectando Petróleo em Produtos</b> foi criado pela jornalista <b>Sumaia Villela</b> no Master em Jornalismo de Dados, Automação e Data Storytelling do Insper. Sua interface e usabilidade vem sendo melhorada aos poucos, à medida que avançamos nas aulas de desenvovimento web.</p>
+
+                <p>Além do professor da UFF Thiago de Melo Lima, este projeto contou com a supervisão de Eduardo Cuducos. Pedro Burgos também  ajudou com soluções valiosas para sair da ideia para a prática.</p>
+
+                <p>Esse é o primeiro protótipo público que construí como jornalista de dados. <b>Se quiser somar e melhorar a ferramenta, reportar um erro ou, de novo, apoiar o projeto, só mandar um e-mail: <em>dadosparasumaia@gmail.com</em></b></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Projeto desenvolvido por Sumaia Villela para o Master em Jornalismo de Dados, Automação e Data Storytelling do Insper. Protótipo em fase experimental | <a target="_blank" href="https://github.com/SumaiaVillela/petroleo_MJD">Código no GitHub</a></p>
+            <p><strong>Informe erros, faça sugestões ou apoie esse projeto:</strong> <span style="color: #c15e2e;">dadosparasumaia@gmail.com</span></p>
+        </div>
+    </footer>
+
+    <script src="static/js/script.js"></script>
 </body>
+
 </html>

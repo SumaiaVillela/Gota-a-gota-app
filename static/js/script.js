@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const headerP = document.querySelector('header p');
     const logoContainer = document.querySelector('.logo-container');
     const formsContainer = document.querySelector('.forms-container');
+    const footer = document.querySelector('footer');
 
     function showLoading() {
         // Mover logo e formulários para a esquerda
@@ -34,11 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Event listener para o botão "Começar de Novo"
         restartButton.addEventListener('click', function() {
-            resultContainer.style.display = 'none'; // Esconde o resultado
-            formsContainer.style.display = 'block'; // Mostra os formulários novamente
-            headerP.style.display = 'block'; // Mostra o texto do header novamente
+            window.location.href = '/'; // Redireciona para a página inicial
         });
+
     }
+    
+    
 
     function handleFormSubmit(form, url) {
         form.addEventListener('submit', function(event) {
